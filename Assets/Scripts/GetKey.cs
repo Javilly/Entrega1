@@ -5,17 +5,30 @@ using UnityEngine;
 public class GetKey : MonoBehaviour
 {
     private Animator anim;
-    public bool Run;
     void Start()
     {
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             anim.SetBool("Run", true);
         }
-        anim.SetBool("Run", false);
+        if(Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            anim.SetBool("Run", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.Rotate(Vector3.up, 180);
+            anim.SetBool("Run", true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            transform.Rotate(Vector3.up, 180);
+            anim.SetBool("Run", false);
+        }
     }
 }

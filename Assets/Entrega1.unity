@@ -226,7 +226,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1ef31344ee8e94b469ecbd2c25f572fe, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 2
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -298,4 +298,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ec87b3a53c9df4684dcfd4d2125586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Run: 0
